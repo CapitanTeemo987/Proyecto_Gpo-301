@@ -7,9 +7,6 @@ Este proyecto consiste en simular campeones de League of Legends a través de cl
 
 Este proyecto ayuda a comprender cómo estructurar clases, inicializar objetos a travez de constructores y llamar métodos en C++.
 
-## Problema a Resolver
-El objetivo es crear clases aisladas para tres tipos de campeones de League of Legends (Mid, Top y ADC), cada una con atributos y métodos que representen características y habilidades típicas de estos roles en el juego. A través de la creación de objetos, el usuario podrá visualizar la información de cada campeón y mejorar su nivel en el juego.
-
 ## Estructura del Programa
 El programa define tres clases en C++: `Mid`, `Top` y `ADC`. Cada clase cuenta con:
 - **Atributos Generales**: Estos incluyen el `nombre` del campeón, su `nivel` y su `poder`.
