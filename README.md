@@ -5,7 +5,7 @@
 ## Descripción del Proyecto
 Este proyecto consiste en simular campeones de League of Legends a través de clases en C++. Se han desarrollado tres clases para tres tipos de campeones: **Mid**, **Top** y **ADC**. Cada clase representa un tipo de campeón con atributos y métodos específicos que permiten simular algunas de sus características.
 
-Este proyecto ayuda a comprender cómo estructurar clases, inicializar objetos y llamar métodos en C++.
+Este proyecto ayuda a comprender cómo estructurar clases, inicializar objetos a travez de constructores y llamar métodos en C++.
 
 ## Problema a Resolver
 El objetivo es crear clases aisladas para tres tipos de campeones de League of Legends (Mid, Top y ADC), cada una con atributos y métodos que representen características y habilidades típicas de estos roles en el juego. A través de la creación de objetos, el usuario podrá visualizar la información de cada campeón y mejorar su nivel en el juego.
@@ -22,12 +22,12 @@ El programa define tres clases en C++: `Mid`, `Top` y `ADC`. Cada clase cuenta c
   - `mejorarNivel()`: Incrementa el nivel del campeón.
 
 ## Funcionalidad del Programa
-El programa crea un objeto para cada clase (un campeón de cada rol) y permite al usuario interactuar con los siguientes métodos:
+El programa crea un objeto para cada clase y permite al usuario interactuar con los siguientes métodos:
 1. **Mostrar Información**: Imprime en consola los atributos del campeón, mostrando una descripción general.
 2. **Mejorar Nivel**: Aumenta el nivel del campeón en uno y muestra el nuevo nivel en la consola.
 
 ## Ejemplo de Uso
-Cuando el usuario ejecuta el programa, se crearán tres campeones: un campeón de rol Mid, uno de rol Top y uno de rol ADC, con atributos específicos. A continuación, se mostrarán los atributos y se mejorará el nivel de cada campeón.
+Cuando el usuario ejecuta el programa, se crearán tres campeones: un campeón de rol Mid, uno de rol Top y uno de rol ADC. A continuación, se mostrarán los atributos y se mejorará el nivel de cada campeón.
 
 ### Salida Esperada
 ```plaintext
