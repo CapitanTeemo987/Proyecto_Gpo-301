@@ -1,4 +1,7 @@
-#include "lol_class.h"
+#include "Mid_class.h"
+#include "Top_class.h"
+#include "ADC_class.h"
+#include "campeon.h"
 #include<iostream>
 using namespace std;
 
@@ -9,13 +12,15 @@ int main() {
     Top campeonTop("Darius", 7, 200, 400);
     ADC campeonADC("Jinx", 3, 120, 50);
 
-    campeonMid.mostrarInfo();
+    cout<<"\n";
+
+    campeonMid.mostrarInfoMid();
     campeonMid.mejorarNivel();
 
-    campeonTop.mostrarInfo();
+    campeonTop.mostrarInfoTop();
     campeonTop.mejorarNivel();
 
-    campeonADC.mostrarInfo();
+    campeonADC.mostrarInfoADC();
     campeonADC.mejorarNivel();
 
     return 0;
