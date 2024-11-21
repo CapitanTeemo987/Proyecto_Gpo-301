@@ -14,7 +14,7 @@ int main() {
     Top campeonTop("Darius", 7, 200, 400, habilidad);
     ADC campeonADC("Jinx", 3, 120, 50, habilidad);
     
-    Equipo equipo1("Cloud9");
+    Equipo equipo1("T1");
     equipo1.AgregaCampeon(&campeonMid);
     equipo1.AgregaCampeon(&campeonTop);
     equipo1.AgregaCampeon(&campeonADC);
