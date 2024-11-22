@@ -41,6 +41,8 @@ La clase `Habilidades` permite definir las habilidades de los campeones, incluye
 El programa crea un objeto para cada clase y permite al usuario interactuar con los siguientes métodos:
 1. **Mostrar Información**: Imprime en consola los atributos del campeón, mostrando una descripción general.
 2. **Mejorar Nivel**: Aumenta el nivel del campeón en uno y muestra el nuevo nivel en la consola.
+3. **Crear equipo**: Crea un vector de 5 espacios en el que se pueden agregar campeones para crear un equipo.
+4. **Habilidades**: Incluyen habilidades únicas que tienen cierto costo de maná y proximamente agregaré daño.
 
 ## Ejemplo de Uso
 Cuando el usuario ejecuta el programa, se crearán tres campeones: un campeón de rol Mid, uno de rol Top y uno de rol ADC. A continuación, se mostrarán los atributos y se mejorará el nivel de cada campeón.
