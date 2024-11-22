@@ -18,6 +18,25 @@ El programa define tres clases en C++: `Mid`, `Top` y `ADC`. Cada clase cuenta c
   - `mostrarInfo()`: Muestra los atributos del campeón, incluyendo el especial.
   - `mejorarNivel()`: Incrementa el nivel del campeón.
 
+### 2. **Equipos** (`equipo.h`)
+La clase `Equipo` permite crear equipos de hasta 5 campeones. Cada equipo tiene un nombre y puede agregar campeones hasta alcanzar su capacidad máxima.
+  
+#### Métodos de Equipo:
+- `set_nombre()`: Asigna el nombre del equipo.
+- `get_nombre()`: Retorna el nombre del equipo.
+- `AgregaCampeon()`: Agrega un campeón al equipo, si hay espacio disponible.
+- `MostrarEquipo()`: Muestra los campeones en el equipo.
+
+### 3. **Habilidades** (`habilidades.h`)
+La clase `Habilidades` permite definir las habilidades de los campeones, incluyendo el nombre de la habilidad, su costo de mana y el daño que produce.
+
+#### Métodos de Habilidades:
+- `set_nombre()`: Asigna el nombre de la habilidad.
+- `set_daño()`: Establece el daño de la habilidad.
+- `set_costo_mana()`: Define el costo de mana.
+- `get_nombre()`, `get_costo_mana()`, `get_daño()`: Retornan los valores respectivos.
+
+
 ## Funcionalidad del Programa
 El programa crea un objeto para cada clase y permite al usuario interactuar con los siguientes métodos:
 1. **Mostrar Información**: Imprime en consola los atributos del campeón, mostrando una descripción general.
@@ -28,9 +47,14 @@ Cuando el usuario ejecuta el programa, se crearán tres campeones: un campeón d
 
 ### Salida Esperada
 ```plaintext
-Campeón Mid: Ahri, Nivel: 5, Poder: 150, Mana: 300
+Campeón Mid: Ahri, Nivel: 5, Poder: 150, Habilidad: Orbe de fuego, Mana: 300
 Ahri ha subido al nivel 6
-Campeón Top: Darius, Nivel: 7, Poder: 200, Resistencia: 400
+Campeón Top: Darius, Nivel: 7, Poder: 200, Habilidad: No registrada, Resistencia: 400
 Darius ha subido al nivel 8
-Campeón ADC: Jinx, Nivel: 3, Poder: 120, Crítico: 50
+Campeón ADC: Jinx, Nivel: 3, Poder: 120, Habilidad: No registrada, Crítico: 50
 Jinx ha subido al nivel 4
+
+Equipo T1:
+integrante 1: Ahri
+integrante 2: Darius
+integrante 3: Jinx
