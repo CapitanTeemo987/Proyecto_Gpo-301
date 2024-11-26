@@ -9,7 +9,7 @@ using namespace std;
 
 class Top : public campeon{
 private:
-    int resistencia; // atributo especial
+    int resistencia; // atributos especial
 
 public:
     // Constructor
@@ -26,6 +26,8 @@ public:
     
     // Método para mejorar el nivel
     void mejorarNivel();
+
+
 };
 
 /*
@@ -36,7 +38,7 @@ public:
  * res - Resistencia inicial
  * hab - Habilidad asignada
  */
-Top::Top(string nom, int niv, int pod, int res, Habilidades hab): campeon(nom, niv, pod, hab){
+Top::Top(string nom, int niv, int pod, int res, Habilidades hab): campeon(nom, niv, pod, hab, "Top"){
     resistencia = res;
 }
 
@@ -61,5 +63,6 @@ void Top::mejorarNivel(){
     campeon::mejorarNivel();
     resistencia += 10;
 }
+
 
 #endif

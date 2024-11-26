@@ -9,7 +9,7 @@ using namespace std;
 // Clase Mid
 class Mid : public campeon{
 private:
-    int mana; // atributo especial
+    int mana;
 
 public:
     // Constructor
@@ -20,12 +20,14 @@ public:
 
     // Getters
     int get_mana();
-    
+
     // Método para mostrar información
     void mostrarInfoMid();
 
     // Método para mejorar el nivel
     void mejorarNivel();
+
+    
 };
 
 
@@ -39,7 +41,7 @@ public:
  * m - Mana inicial
  * hab - Habilidad asignada
  */
-Mid::Mid(string nom, int niv, int pod, int m, Habilidades hab): campeon(nom, niv, pod, hab){
+Mid::Mid(string nom, int niv, int pod, int m, Habilidades hab): campeon(nom, niv, pod, hab, "Mid"){
     mana = m;
 }
 

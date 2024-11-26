@@ -22,11 +22,13 @@ class campeon{
         int nivel;
         int poder;
         Habilidades habilidad;
-    
+        std::string tipo;
+
     public: 
         
         //Constructores
-        campeon(string, int, int, Habilidades);
+        campeon();
+        campeon(string, int, int, Habilidades, std::string);
         
         void set_nombre(string);
         void set_nivel(int);
@@ -42,8 +44,19 @@ class campeon{
         void mostrarInfo();
         void mejorarNivel();
 
+        // Getter para obtener el tipo
+        std::string get_tipo();
+
 };
 
+
+// Constructor por defecto
+campeon::campeon(){
+    nombre = "";
+    nivel = 0;
+    poder = 0;
+    tipo = "";
+}
 
 /*
  * Constructor que inicializa un campeón con valores específicos
@@ -54,11 +67,12 @@ class campeon{
  */
 
 //Creación del primer constructor 
-campeon::campeon(string nom, int niv, int pod, Habilidades hab){
+campeon::campeon(string nom, int niv, int pod, Habilidades hab, std::string tip){
     nombre = nom;
     nivel = niv;
     poder = pod;
     habilidad = hab;
+    tipo = tip;
 }
 
 /*
@@ -114,7 +128,7 @@ Habilidades campeon::get_habilidad(){
  * Imprime nombre, nivel, poder y nombre de la habilidad
  */
 void campeon::mostrarInfo(){
-    cout << "Campeon Mid: " << nombre << ", Nivel: " << nivel << ", Poder: " << poder << ", Habilidad: " << habilidad.get_nombre();
+    cout << "Campeon tipo " << tipo << ": Nombre: " << nombre << ", Nivel: " << nivel << ", Poder: " << poder << ", Habilidad: " << habilidad.get_nombre();
 }
 
 /*
@@ -124,6 +138,11 @@ void campeon::mostrarInfo(){
 void campeon::mejorarNivel(){
     nivel++;
     cout << nombre << " ha subido al nivel " << nivel << endl << endl;
+}
+
+// Getter para obtener el tipo
+std::string campeon::get_tipo(){
+    return tipo;
 }
 
 #endif

@@ -8,8 +8,7 @@ using namespace std;
 
 class ADC : public campeon{
 private:
-    int critico; // atributo especial
-
+    int critico; // atributos especial
 public:
     // Constructor
     ADC(string, int, int, int, Habilidades);
@@ -25,6 +24,8 @@ public:
 
     // Método para mejorar el nivel
     void mejorarNivel();
+
+
 };
 
 
@@ -36,7 +37,7 @@ public:
  * cri - Critico inicial
  * hab - Habilidad asignada
  */
-ADC::ADC(string nom, int niv, int pod, int cri, Habilidades hab): campeon(nom, niv, pod, hab){
+ADC::ADC(string nom, int niv, int pod, int cri, Habilidades hab): campeon(nom, niv, pod, hab, "ADC"){
     critico = cri;
 }
 
@@ -61,6 +62,8 @@ void ADC::mejorarNivel(){
     campeon::mejorarNivel();
     critico += 5;
 }
+
+// Getter para obtener el tipo
 
 
 #endif

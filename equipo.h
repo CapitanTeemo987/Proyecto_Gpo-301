@@ -10,7 +10,7 @@ class Equipo{
     private:
         std::string nombre; // Nombre del equipo
         std::vector<campeon*> campeones; // Vector de punteros para solo almacenar la memoria de los campeones
-        const int CapacidadTeam = 5; // Capacidad máxima del equipo
+        const int CapacidadTeam = 3; // Capacidad máxima del equipo
 
     public:
         Equipo();
@@ -22,6 +22,14 @@ class Equipo{
         void AgregaCampeon(campeon*);
         void MostrarEquipo();
 };
+
+
+/*
+ * Constructor por defecto
+ */
+Equipo::Equipo(){
+    nombre = "";
+}
 
 /*
  * Constructor que inicializa el nombre del equipo
@@ -62,7 +70,7 @@ void Equipo::AgregaCampeon(campeon* integrante){
 void Equipo::MostrarEquipo(){
     std::cout << "Equipo " << nombre << ":" << std::endl;   // Muestra el nombre del equipo
     for(int i = 0; i < campeones.size(); i++){
-        std::cout << "integrante " << i + 1 << ": " << campeones[i]->get_nombre() << std::endl; // Muestra el nombre de cada campeón en el equipo
+        std::cout << "integrante " << i + 1 << ": " << campeones[i]->get_nombre() << ", linea: " << campeones[i]->get_tipo() << std::endl; // Muestra el nombre de cada campeón en el equipo
     }
 }
 
