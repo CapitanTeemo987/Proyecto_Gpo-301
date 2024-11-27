@@ -22,6 +22,7 @@ class Equipo{
 
         void AgregaCampeon(campeon*);
         void MostrarEquipo();
+        void EliminarCampeon(campeon*);
 };
 
 
@@ -81,7 +82,13 @@ void Equipo::MostrarEquipo(){
     }
 }
 
-
-
+void Equipo::EliminarCampeon(campeon* campeon){ // Elimina un campeón del equipo
+    for(int i = 0; i < CapacidadTeam; i++){ //ciclo para recorrer el arreglo de punteros
+        if(campeones[i] == campeon){ // Verifica si el puntero actual es igual al puntero pasado como argumento
+            campeones[i] = nullptr; // Asigna nullptr al puntero actual para eliminar el campeón
+            break;
+        }
+    }
+}
 #endif
 

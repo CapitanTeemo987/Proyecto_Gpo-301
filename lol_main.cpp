@@ -14,7 +14,8 @@ void Menu(){
     std::cout<<"5. Mostrar equipo"<<std::endl;
     std::cout<<"6. Crear equipo de ejemplo"<<std::endl;
     std::cout<<"7. Mejorar nivel de campeones"<<std::endl;
-    std::cout<<"8. Salir"<<std::endl;
+    std::cout<<"8. Eliminar campeon"<<std::endl;
+    std::cout<<"9. Salir"<<std::endl;
     std::cout<<"\n";
 }
 
@@ -22,15 +23,18 @@ void Menu(){
 int main() {
     int opcion = 0;
     int opcionLinea = 0;
+    int opcionEliminar = 0;
     Equipo equipo1;
     bool EquipoCreado = false; // Variable para verificar si el equipo está creado
     bool CampeonMidCreado = false; // Variable para verificar si el campeón Mid está creado
     bool CampeonTopCreado = false; // Variable para verificar si el campeón Top está creado
     bool CampeonADCCreado = false; // Variable para verificar si el campeón ADC está creado
     
-    Mid* campeonMid = nullptr; // Puntero para el campeón Mid
-    Top* campeonTop = nullptr; // Puntero para el campeón Top
-    ADC* campeonADC = nullptr; // Puntero para el campeón ADC
+
+    /*Punteros nulos para los campeones. Eso para poder usar sus metodos sin tener problemas de punteros no inicializados*/
+    Mid* campeonMid = nullptr; // Puntero nulo para el campeón Mid
+    Top* campeonTop = nullptr; // Puntero nulo para el campeón Top
+    ADC* campeonADC = nullptr; // Puntero nulo para el campeón ADC
 
 
     while (true){
@@ -38,7 +42,7 @@ int main() {
         Menu();
         std::cin>>opcion;
 
-        if (opcion == 8){
+        if (opcion == 9){
             std::cout << "Saliendo..." << std::endl;
             break;
         }
@@ -285,6 +289,65 @@ int main() {
                 }
                 break;
             }
+            case 8:{
+                if (EquipoCreado){
+                    std::cout<<"Seleccione la linea del campeon que desea eliminar: "<<std::endl;
+                    std::cout<<"1. Mid"<<std::endl;
+                    std::cout<<"2. Top"<<std::endl;
+                    std::cout<<"3. ADC"<<std::endl;
+                    std::cin>>opcionEliminar;
+
+                    switch (opcionEliminar){
+                        case 1:{
+                            if(CampeonMidCreado && campeonMid != nullptr){
+                                equipo1.EliminarCampeon(campeonMid);
+                                delete campeonMid;
+                                campeonMid = nullptr;
+                                CampeonMidCreado = false;
+                                std::cout << "El campeon Mid se ha eliminado exitosamente"<<std::endl;
+
+                            }
+                            else{
+                                std::cout << "No existe un campeon Mid"<<std::endl;
+                        }
+                            break;
+                    }
+                        
+                    
+                        case 2:{
+                            if(CampeonTopCreado && campeonTop != nullptr){
+                                equipo1.EliminarCampeon(campeonTop);
+                                delete campeonTop;
+                                campeonTop = nullptr;
+                                CampeonTopCreado = false;
+                                std::cout<<"El campeon Top se ha eliminado exitosamente"<<std::endl;
+                            }
+                            else{
+                                std::cout<<"No existe un campeon Top"<<std::endl;
+                            }
+                            break;
+                        }
+                        case 3:{
+                            if (CampeonADCCreado && campeonADC != nullptr){
+                                equipo1.EliminarCampeon(campeonADC);
+                                delete campeonADC;
+                                campeonADC = nullptr;
+                                CampeonADCCreado = false;
+                                std::cout<<"El campeon ADC se ha eliminado exitosamente"<<std::endl;
+                            }
+                            else{
+                                std::cout<<"No existe un campeon ADC"<<std::endl;
+                            }
+                            break;
+                        }
+                    }
+                }
+                else{
+                    std::cout<<"No hay campeones en el equipo"<<std::endl;
+                }
+                break;
+            }
+
         }
     }
 
