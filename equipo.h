@@ -9,8 +9,9 @@
 class Equipo{
     private:
         std::string nombre; // Nombre del equipo
-        std::vector<campeon*> campeones; // Vector de punteros para solo almacenar la memoria de los campeones
+        campeon* campeones[3]; // Arreglo de punteros para almacenar los campeones
         const int CapacidadTeam = 3; // Capacidad máxima del equipo
+
 
     public:
         Equipo();
@@ -29,6 +30,9 @@ class Equipo{
  */
 Equipo::Equipo(){
     nombre = "";
+    for(int i = 0; i < CapacidadTeam; i++){ // Inicializa el arreglo de punteros a nullptr para evitar errores de memoria
+        campeones[i] = nullptr;
+    }
 }
 
 /*
@@ -36,6 +40,9 @@ Equipo::Equipo(){
  */
 Equipo::Equipo(std::string nom){
     nombre = nom;
+    for(int i = 0; i < CapacidadTeam; i++){ // Inicializa el arreglo de punteros a nullptr para evitar errores de memoria
+        campeones[i] = nullptr;
+    }
 }
 
 /*
@@ -52,27 +59,29 @@ std::string Equipo::get_nombre(){
     return nombre;
 }
 
-/*
- * Método para agregar un campeón al equipo
- */
-void Equipo::AgregaCampeon(campeon* integrante){
-    if(campeones.size() < CapacidadTeam){ // Verifica si el equipo tiene espacio para agregar un campeón
-        campeones.push_back(integrante);// Agrega el campeón al equipo
-    }
-    else{ // Si el equipo está lleno, muestra un mensaje
-        std::cout << "El equipo está lleno";
+
+void Equipo::AgregaCampeon(campeon* campeon){
+    for(int i = 0; i < CapacidadTeam; i++){
+        if(campeones[i] == nullptr){ // Verifica si el espacio está vacío
+            campeones[i] = campeon; // Agrega el campeón al espacio vacío
+            break;
+        }
     }
 }
 
-/*
- * Método para mostrar el equipo
- */
 void Equipo::MostrarEquipo(){
-    std::cout << "Equipo " << nombre << ":" << std::endl;   // Muestra el nombre del equipo
-    for(int i = 0; i < campeones.size(); i++){
-        std::cout << "integrante " << i + 1 << ": " << campeones[i]->get_nombre() << ", linea: " << campeones[i]->get_tipo() << std::endl; // Muestra el nombre de cada campeón en el equipo
+    std::cout << "Equipo " << nombre << ":" << std::endl;
+    for(int i = 0; i < CapacidadTeam; i++){
+        if(campeones[i] != nullptr){ // Verifica si el espacio está ocupado
+            std::cout << "integrante " << i + 1 << ": " << campeones[i]->get_nombre() << ", linea: " << campeones[i]->get_tipo() << std::endl;
+        } 
+        else{ // Si el espacio está vacío, muestra "vacio"
+            std::cout << "integrante " << i + 1 << ": " << "vacio" << std::endl;
+        }
     }
 }
+
+
 
 #endif
 
