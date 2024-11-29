@@ -57,7 +57,7 @@ int main() {
                     EquipoCreado = true;
                 }
                 else{
-                    std::cout << "Debes crear un equipo antes de agregar un campeon" << std::endl;
+                    std::cout << "El equipo ya existe" << std::endl;
                 }
                 break;
             }
@@ -75,17 +75,22 @@ int main() {
                         std::cout << "\nIngrese el nombre del campeon: "<<std::endl;
                         std::cin>>nombreMid;
                         std::cout << "\nIngrese el nivel del campeon: "<<std::endl;
+                        std::cout<<"Solo se aceptan valores numericos"<<std::endl;
                         std::cin>>nivelMid;
                         std::cout << "\nIngrese el poder del campeon: "<<std::endl;
+                        std::cout<<"Solo se aceptan valores numericos"<<std::endl;
                         std::cin>>poderMid;
                         std::cout << "\nIngrese el mana del campeon: "<<std::endl;
+                        std::cout<<"Solo se aceptan valores numericos"<<std::endl;
                         std::cin>>manaMid;
                         std::cout << "\nIngrese el nombre de la habilidad: "<<std::endl;
                         std::cout<<"Solo ingrese el nombre de la habilidad, no se aceptan espacios. Ejemplo: OrbeDeFuego"<<std::endl;
                         std::cin>>nombreHabilidadMid;
                         std::cout << "\nIngrese el costo de mana de la habilidad: "<<std::endl;
+                        std::cout<<"Solo se aceptan valores numericos"<<std::endl;
                         std::cin>>costoManaMid;
                         std::cout << "\nIngrese el dano de la habilidad: "<<std::endl;
+                        std::cout<<"Solo se aceptan valores numericos"<<std::endl;
                         std::cin>>danioMid;
                         Habilidades habilidadMid(nombreHabilidadMid, costoManaMid, danioMid);
                         campeonMid = new Mid(nombreMid, nivelMid, poderMid, manaMid, habilidadMid);
@@ -118,17 +123,22 @@ int main() {
                         std::cout << "\nIngrese el nombre del campeon: "<<std::endl;
                         std::cin>>nombreTop;
                         std::cout << "\nIngrese el nivel del campeon: "<<std::endl;
+                        std::cout<<"Solo se aceptan valores numericos"<<std::endl;
                         std::cin>>nivelTop;
                         std::cout << "\nIngrese el poder del campeon: "<<std::endl;
+                        std::cout<<"Solo se aceptan valores numericos"<<std::endl;
                         std::cin>>poderTop;
                         std::cout << "\nIngrese la resistencia del campeon: "<<std::endl;
+                        std::cout<<"Solo se aceptan valores numericos"<<std::endl;
                         std::cin>>resistenciaTop;
                         std::cout << "\nIngrese el nombre de la habilidad: "<<std::endl;
                         std::cout<<"Solo ingrese el nombre de la habilidad, no se aceptan espacios. Ejemplo: EscudoGigante"<<std::endl;
                         std::cin>>nombreHabilidadTop;
                         std::cout << "\nIngrese el costo de mana de la habilidad: "<<std::endl;
+                        std::cout<<"Solo se aceptan valores numericos"<<std::endl;
                         std::cin>>costoManaTop;
                         std::cout << "\nIngrese el dano de la habilidad: "<<std::endl;
+                        std::cout<<"Solo se aceptan valores numericos"<<std::endl;
                         std::cin>>danioTop;
                         Habilidades habilidadTop(nombreHabilidadTop, costoManaTop, danioTop);
                         campeonTop = new Top(nombreTop, nivelTop, poderTop, resistenciaTop, habilidadTop);
@@ -161,17 +171,22 @@ int main() {
                         std::cout << "\nIngrese el nombre del campeon: "<<std::endl;
                         std::cin>>nombreADC;
                         std::cout << "\nIngrese el nivel del campeon: "<<std::endl;
+                        std::cout<<"Solo se aceptan valores numericos"<<std::endl;
                         std::cin>>nivelADC;
                         std::cout << "\nIngrese el poder del campeon: "<<std::endl;
+                        std::cout<<"Solo se aceptan valores numericos"<<std::endl;
                         std::cin>>poderADC;
                         std::cout << "\nIngrese el critico del campeon: "<<std::endl;
+                        std::cout<<"Solo se aceptan valores numericos"<<std::endl;
                         std::cin>>criticoADC;
                         std::cout << "\nIngrese el nombre de la habilidad: "<<std::endl;
                         std::cout<<"Solo ingrese el nombre de la habilidad, no se aceptan espacios. Ejemplo: FlechaExplosiva"<<std::endl;
                         std::cin>>nombreHabilidadADC;
                         std::cout << "\nIngrese el costo de mana de la habilidad: "<<std::endl;
+                        std::cout<<"Solo se aceptan valores numericos"<<std::endl;
                         std::cin>>costoManaADC;
                         std::cout << "\nIngrese el dano de la habilidad: "<<std::endl;
+                        std::cout<<"Solo se aceptan valores numericos"<<std::endl;
                         std::cin>>danioADC;  
                         Habilidades habilidadADC(nombreHabilidadADC, costoManaADC, danioADC);
                         campeonADC = new ADC(nombreADC, nivelADC, poderADC, criticoADC, habilidadADC);
