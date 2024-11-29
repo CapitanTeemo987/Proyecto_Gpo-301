@@ -193,6 +193,15 @@ int main() {
             case 5:{
                 if (EquipoCreado){
                     equipo1.MostrarEquipo();
+                    if (CampeonMidCreado){
+                        campeonMid->mostrarInfoMid();
+                    }
+                    if (CampeonTopCreado){
+                        campeonTop->mostrarInfoTop();
+                    }
+                    if (CampeonADCCreado){
+                        campeonADC->mostrarInfoADC();
+                    }
                 }
                 else{
                     std::cout << "\nEl equipo no existe" << std::endl;
