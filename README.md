@@ -17,6 +17,16 @@ El programa define tres clases en C++: `Mid`, `Top` y `ADC`. Cada clase cuenta c
 - **Métodos**:
   - `mostrarInfo()`: Muestra los atributos del campeón, incluyendo el especial.
   - `mejorarNivel()`: Incrementa el nivel del campeón.
+  - **Nuevos Métodos** (definidos en `campeon.h`):
+    - `set_nombre()`: Asigna un nombre al campeón.
+    - `set_nivel()`: Modifica el nivel del campeón.
+    - `set_poder()`: Establece el poder del campeón.
+    - `set_Habilidad()`: Asigna un objeto de tipo `Habilidades` al campeón.
+    - `get_nombre()`: Devuelve el nombre del campeón.
+    - `get_nivel()`: Devuelve el nivel del campeón.
+    - `get_poder()`: Devuelve el poder del campeón.
+    - `get_habilidad()`: Retorna el objeto `Habilidades` del campeón.
+    - `get_tipo()`: Devuelve el tipo del campeón (Mid, Top, ADC).
 
 ### 2. **Equipos** (`equipo.h`)
 La clase `Equipo` permite crear equipos de hasta 5 campeones. Cada equipo tiene un nombre y puede agregar campeones hasta alcanzar su capacidad máxima.
@@ -32,9 +42,21 @@ La clase `Habilidades` permite definir las habilidades de los campeones, incluye
 
 #### Métodos de Habilidades:
 - `set_nombre()`: Asigna el nombre de la habilidad.
-- `set_daño()`: Establece el daño de la habilidad.
+- `set_danio()`: Establece el daño de la habilidad.
 - `set_costo_mana()`: Define el costo de mana.
-- `get_nombre()`, `get_costo_mana()`, `get_daño()`: Retornan los valores respectivos.
+- `get_nombre()`, `get_costo_mana()`, `get_danio()`: Retornan los valores respectivos.
+
+### 4. **Menú Principal**
+El programa cuenta con un menú interactivo que permite al usuario realizar distintas acciones. Estas son las opciones disponibles:
+1. Crear equipo.
+2. Agregar campeón Mid.
+3. Agregar campeón Top.
+4. Agregar campeón ADC.
+5. Mostrar equipo.
+6. Crear equipo de ejemplo.
+7. Mejorar nivel de los campeones.
+8. Eliminar campeón.
+9. Salir.
 
 
 ## Funcionalidad del Programa
