@@ -85,6 +85,8 @@ integrante 3: Jinx
 `````
 ## Referencias
 -Programación ATS. (2016, August 15). 82. Programación en C++ || Punteros || Declaración de Punteros [Video]. YouTube. https://www.youtube.com/watch?v=_pcfFMFs9-g
+
 -Devs’ Den. (2017, March 29). 26. Introducción a los punteros - C++ de 0 a Experto! [Video]. YouTube. https://www.youtube.com/watch?v=R1S8FqJ4AKs
+
 -González, J. D. M. (2020, May 14). Punteros. https://www.programarya.com/Cursos/C++/Estructuras-de-Datos/Punteros
 
