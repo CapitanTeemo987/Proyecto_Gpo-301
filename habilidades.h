@@ -8,19 +8,19 @@ class Habilidades{
     private:
         std::string nombre;
         int costo_mana;
-        int daño;
+        int danio;
 
     public:
         Habilidades();
         Habilidades(std::string, int, int);
 
         void set_nombre(std::string);
-        void set_daño(int);
+        void set_danio(int);
         void set_costo_mana(int);
 
         std::string get_nombre();
         int get_costo_mana();
-        int get_daño();
+        int get_danio();
 
 };
 
@@ -30,7 +30,7 @@ class Habilidades{
 Habilidades::Habilidades(){
     nombre = "No registrada";
     costo_mana = 0;
-    daño = 0;
+    danio = 0;
 }
 
 /*
@@ -39,7 +39,7 @@ Habilidades::Habilidades(){
 Habilidades::Habilidades(std::string nom, int man, int dan){
     nombre = nom;
     costo_mana = man;
-    daño = dan;
+    danio = dan;
 }
 
 /*
@@ -59,8 +59,8 @@ void Habilidades::set_costo_mana(int man){
 /*
  * Setter para modificar el daño de la habilidad
  */
-void Habilidades::set_daño(int dan){
-    daño = dan;
+void Habilidades::set_danio(int dan){
+    danio = dan;
 }
 
 /*
@@ -80,8 +80,8 @@ int Habilidades::get_costo_mana(){
 /*
  * Getter para obtener el daño de la habilidad
  */
-int Habilidades::get_daño(){
-    return daño;
+int Habilidades::get_danio(){
+    return danio;
 }
 
 #endif

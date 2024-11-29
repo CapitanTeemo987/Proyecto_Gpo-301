@@ -70,7 +70,7 @@ int main() {
                         int manaMid;
                         std::string nombreHabilidadMid;
                         int costoManaMid;
-                        int dañoMid;
+                        int danioMid;
 
                         std::cout << "\nIngrese el nombre del campeon: "<<std::endl;
                         std::cin>>nombreMid;
@@ -86,8 +86,8 @@ int main() {
                         std::cout << "\nIngrese el costo de mana de la habilidad: "<<std::endl;
                         std::cin>>costoManaMid;
                         std::cout << "\nIngrese el dano de la habilidad: "<<std::endl;
-                        std::cin>>dañoMid;
-                        Habilidades habilidadMid(nombreHabilidadMid, costoManaMid, dañoMid);
+                        std::cin>>danioMid;
+                        Habilidades habilidadMid(nombreHabilidadMid, costoManaMid, danioMid);
                         campeonMid = new Mid(nombreMid, nivelMid, poderMid, manaMid, habilidadMid);
                         equipo1.AgregaCampeon(campeonMid);
                         CampeonMidCreado = true;
@@ -113,7 +113,7 @@ int main() {
                         int resistenciaTop;
                         std::string nombreHabilidadTop;
                         int costoManaTop;
-                        int dañoTop;
+                        int danioTop;
 
                         std::cout << "\nIngrese el nombre del campeon: "<<std::endl;
                         std::cin>>nombreTop;
@@ -129,8 +129,8 @@ int main() {
                         std::cout << "\nIngrese el costo de mana de la habilidad: "<<std::endl;
                         std::cin>>costoManaTop;
                         std::cout << "\nIngrese el dano de la habilidad: "<<std::endl;
-                        std::cin>>dañoTop;
-                        Habilidades habilidadTop(nombreHabilidadTop, costoManaTop, dañoTop);
+                        std::cin>>danioTop;
+                        Habilidades habilidadTop(nombreHabilidadTop, costoManaTop, danioTop);
                         campeonTop = new Top(nombreTop, nivelTop, poderTop, resistenciaTop, habilidadTop);
                         equipo1.AgregaCampeon(campeonTop);
                         CampeonTopCreado = true;
@@ -156,7 +156,7 @@ int main() {
                         int criticoADC;
                         std::string nombreHabilidadADC;
                         int costoManaADC;
-                        int dañoADC;
+                        int danioADC;
 
                         std::cout << "\nIngrese el nombre del campeon: "<<std::endl;
                         std::cin>>nombreADC;
@@ -172,8 +172,8 @@ int main() {
                         std::cout << "\nIngrese el costo de mana de la habilidad: "<<std::endl;
                         std::cin>>costoManaADC;
                         std::cout << "\nIngrese el dano de la habilidad: "<<std::endl;
-                        std::cin>>dañoADC;  
-                        Habilidades habilidadADC(nombreHabilidadADC, costoManaADC, dañoADC);
+                        std::cin>>danioADC;  
+                        Habilidades habilidadADC(nombreHabilidadADC, costoManaADC, danioADC);
                         campeonADC = new ADC(nombreADC, nivelADC, poderADC, criticoADC, habilidadADC);
                         equipo1.AgregaCampeon(campeonADC);
                         CampeonADCCreado = true;
